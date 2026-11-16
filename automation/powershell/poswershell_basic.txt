@@ -1,1 +1,25 @@
 
+To identify the list of properties on services
+
+Get-Service | Get-Member -MemberType Property
+o/p:
+Name                MemberType Definition                                                         
+----                ---------- ----------                                                         
+CanPauseAndContinue Property   bool CanPauseAndContinue {get;}                                    
+CanShutdown         Property   bool CanShutdown {get;}                                            
+CanStop             Property   bool CanStop {get;}                                                
+Container           Property   System.ComponentModel.IContainer Container {get;}                  
+DependentServices   Property   System.ServiceProcess.ServiceController[] DependentServices {get;} 
+DisplayName         Property   string DisplayName {get;set;}                                      
+MachineName         Property   string MachineName {get;set;}                                      
+ServiceHandle       Property   System.Runtime.InteropServices.SafeHandle ServiceHandle {get;}     
+ServiceName         Property   string ServiceName {get;set;}                                      
+ServicesDependedOn  Property   System.ServiceProcess.ServiceController[] ServicesDependedOn {get;}
+ServiceType         Property   System.ServiceProcess.ServiceType ServiceType {get;}               
+Site                Property   System.ComponentModel.ISite Site {get;set;}                        
+StartType           Property   System.ServiceProcess.ServiceStartMode StartType {get;}            
+Status              Property   System.ServiceProcess.ServiceControllerStatus Status {get;}  
+
+For running services:
+
+Get-Service | Where-Object { $_.Status -eq 'Running' }
