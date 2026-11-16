@@ -1,5 +1,5 @@
 
-To identify the list of properties on services
+1. To identify the list of names properties on services
 
 Get-Service | Get-Member -MemberType Property
 o/p:
