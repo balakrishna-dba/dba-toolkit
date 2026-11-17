@@ -93,6 +93,12 @@ Shared_buffer- 25% to 40%
 Wal_buffer- 16MB
 Effective_cache_size- 50% of ram
 
+work_mem- Defulat size is 4MB
+Work_mem =totalram*.25/max_connections
+
+Maintenance_work_mem - used for vacuum and maintenance tasks.
+
+Temp_buffers
 
 
 
