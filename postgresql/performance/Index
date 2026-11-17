@@ -1,6 +1,6 @@
-Postgre SQL- Azure Flexible Server 
+PostgreSQL- Azure Flexible Server 
 
-Defult perameters
+Default parameters
 
 Index
 
@@ -11,10 +11,10 @@ Index
 5 Indexes
 
 1. B-tree:
- to speedup the search
+ to speed up the search
 operations =,>,<,>=,<=, is noll, is not null, between, in 
 
-On order by - ASC, DESC, NUll first, Null last
+On order by - ASC, DESC, Null first, Null last
 
 Multicolumn index
 
@@ -45,7 +45,7 @@ BRIN index:
 Performace Improvement in PostgreSQL
 
 Step1:
-shared_preload_library -- enablle
+shared_preload_library -- enable
 
 pg_stat_statements- It saves the run time query info and store it 
 How to enable - 
@@ -59,6 +59,11 @@ If you want to view the statements:
 
 SELECT * FROM public.pg_stat_statements  */ it stored the data in this view*/
 
+Execution Plan:
+show seq_page_cost; 
+1
+show random_page_cost;
+2- in Azure and 4 -in Onprime
 
 
 Why to use Work_mem
