@@ -1,3 +1,6 @@
+Postgre SQL- Azure Flexible Server 
+
+Defult perameters
 
 Index
 
@@ -38,6 +41,54 @@ GIN Inddex
 
 BRIN index:
 - binary range index?
+
+Performace Improvement in PostgreSQL
+
+Step1:
+shared_preload_library -- enablle
+
+pg_stat_statements- It saves the run time query info and store it 
+How to enable - 
+SHOW shared_preload_libraries;
+
+SELECT extname, extversion FROM pg_extension;
+
+CREATE EXTENSION IF NOT EXISTS pg_stat_statements;
+
+If you want to view the statements: 
+
+SELECT * FROM public.pg_stat_statements  */ it stored the data in this view*/
+
+
+
+Why to use Work_mem
+
+
+SELECT * FROM public.pg_stat_statements
+
+
+it is catlog view - pg_stats_user view has the information on deadtuple vs live tuble to know the statistics are upated or not
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 - any large data set it works 
 - good on linear searches
 
