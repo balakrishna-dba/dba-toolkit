@@ -75,8 +75,23 @@ When estimate rows are more than actual then update the statistcs
 EXPLAIN (ANALYSE, BUFFERS) SELECT * FROM EMP.SCHOO;
 - it shows the query is actually hitting buffer or not
 
+***- Need to set the statistcs - for the bigger table (100-10000)
+
+Extended Statistics:
+?
+?
+Parallel Query execution will only works for Select not for update or inserver and delete
+Look for show max_parallel_workers_per_gather
 
 
+Add/ Remove Indexes:
++----------------+
+|   App Server   |
++----------------+
+
+Shared_buffer- 25% to 40%
+Wal_buffer- 16MB
+Effective_cache_size- 50% of ram
 
 
 
