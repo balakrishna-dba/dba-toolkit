@@ -1,1 +1,45 @@
 
+Index
+
+1. On where clause
+2. On order by
+3. On group by
+
+5 Indexes
+
+1. B-tree:
+ to speedup the search
+operations =,>,<,>=,<=, is noll, is not null, between, in 
+
+On order by - ASC, DESC, NUll first, Null last
+
+Multicolumn index
+
+Unique Index:
+
+- like primary key or unique column
+
+function index
+
+partial index
+
+
+Hash indexes: for = 
+1. can create on only one column
+2. low cardinality - more duplicates will support
+
+GiSt Indexes (generalized search tree index)
+1. use for geometric data
+
+GIN Inddex
+
+1. large amount of text column
+2. on Array columns
+
+BRIN index:
+- binary range index?
+- any large data set it works 
+- good on linear searches
+
+Index-Only scans and covering index:
+
