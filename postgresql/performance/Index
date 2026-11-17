@@ -65,8 +65,23 @@ show seq_page_cost;
 show random_page_cost;
 2- in Azure and 4 -in Onprime
 
+Cost:
+select name, settings, unit,  cotext from pg_settings where name like ='%cost%';
 
-Why to use Work_mem
+EXPLAIN ANALYSE SELECT * FROM EMP.SCHOO;
+- It gives the actual execution time of the query
+When estimate rows are more than actual then update the statistcs
+
+EXPLAIN (ANALYSE, BUFFERS) SELECT * FROM EMP.SCHOO;
+- it shows the query is actually hitting buffer or not
+
+
+
+
+
+
+
+Why to use Work_mem?
 
 
 SELECT * FROM public.pg_stat_statements
@@ -74,28 +89,10 @@ SELECT * FROM public.pg_stat_statements
 
 it is catlog view - pg_stats_user view has the information on deadtuple vs live tuble to know the statistics are upated or not
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 - any large data set it works 
 - good on linear searches
 
 Index-Only scans and covering index:
+
+
 
