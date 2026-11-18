@@ -1,0 +1,12 @@
+Parameter                 / Setting	Recommendation	Why it matters
+max_connections	            Review and validate	Application connection requirements
+shared_buffers	            Review default	Memory allocation
+work_mem	                  Review default	Sort and hash operations
+maintenance_work_mem	      Review default	Index creation and maintenance
+effective_cache_size	      Review default	Query planner estimates
+timezone                   	Explicitly validate	Application date/time consistency
+azure.extensions      	    Configure required extensions	Extension availability
+pg_stat_statements	        Enable if required	Query performance monitoring
+log_min_duration_statement	Decide logging threshold	Identify slow queries
+log_checkpoints	Review	    Checkpoint monitoring
+autovacuum	Keep enabled	  Table maintenance and bloat prevention
